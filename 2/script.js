@@ -10,8 +10,18 @@ let week = [
 
 
     for (i = 0; i < week.length; i++) {
-        document.write('<p>' + week[i] + '</p>');  
-    }
+        let myweek = week[i];
+
+        if (week[i] == "Суббота" || week[i] == "Воскресенье") {
+
+            document.write('<p><strong>' + myweek + '</strong></p>');
+
+            } else {
+                document.write('<p>' + myweek + '</p>');
+            }
+        }
+
+/*
 let saturday = document.getElementsByTagName('p')[5],
     sunday = document.getElementsByTagName('p')[6],
     thursday = document.getElementsByTagName('p')[3];
@@ -19,6 +29,7 @@ let saturday = document.getElementsByTagName('p')[5],
     saturday.style.fontWeight = 'bold';
     sunday.style.fontWeight = 'bold';
     thursday.style.fontStyle = 'italic';
+*/
 
 
 
