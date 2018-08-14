@@ -1,12 +1,20 @@
 let week = [
+         'Воскресенье',
          'Понедельник',
          'Вторник',
          'Среда',
          'Четверг',
          'Пятница',
-         'Суббота',
-         'Воскресенье'
+         'Суббота'
         ];
+
+let date = new Date();
+let weeks = date.getDay();
+console.log(weeks);
+
+
+
+
 
 
     for (i = 0; i < week.length; i++) {
@@ -16,6 +24,9 @@ let week = [
 
             document.write('<p><strong>' + myweek + '</strong></p>');
 
+            } else if (week[i] == week[weeks]) {
+              document.write('<p><strong>' + myweek + '</strong></p>');
+               
             } else {
                 document.write('<p>' + myweek + '</p>');
             }
@@ -45,10 +56,10 @@ arr = [];
         
 for (let i = 0; i < arr.length; i++) {
 
-    let sum = arr[i];
-        mySlow = sum.charAt(0);
+    let sum = arr[i].charAt(0);
+        
 
-    if (mySlow == '3' || mySlow == '7') {
+    if (sum == '3' || sum == '7') {
 
        console.log(arr[i]);
     }
